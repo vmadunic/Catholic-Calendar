@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catholic Calendar — Support</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+            line-height: 1.7;
+            color: #333;
+            background: #fff;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+            background: #7B3F00;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+
+        .app-icon span {
+            font-size: 36px;
+        }
+
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+
+        .subtitle {
+            color: #888;
+            font-size: 15px;
+        }
+
+        .lang-toggle {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .lang-btn {
+            padding: 6px 20px;
+            border-radius: 20px;
+            border: 1.5px solid #7B3F00;
+            background: none;
+            color: #7B3F00;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .lang-btn.active {
+            background: #7B3F00;
+            color: #fff;
+        }
+
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin: 40px 0 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 24px 0 6px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .faq-item {
+            margin-bottom: 24px;
+        }
+
+        .contact-card {
+            background: #f9f5f2;
+            border-left: 4px solid #7B3F00;
+            border-radius: 0 8px 8px 0;
+            padding: 20px 24px;
+            margin: 32px 0;
+        }
+
+        .contact-card p {
+            margin-bottom: 6px;
+        }
+
+        a {
+            color: #7B3F00;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #f0e8e0;
+            color: #7B3F00;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+        }
+
+        footer {
+            margin-top: 64px;
+            text-align: center;
+            font-size: 13px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="app-icon"><span>✝</span></div>
+    <h1>Catholic Calendar</h1>
+    <p class="subtitle">Feasts, Saints &amp; Prayers</p>
+</header>
+
+<div class="lang-toggle">
+    <button class="lang-btn active" onclick="setLang('en')">English</button>
+    <button class="lang-btn" onclick="setLang('hr')">Hrvatski</button>
+</div>
+
+<!-- ═══════════════════════════════════════ ENGLISH ═══ -->
+<div class="lang-section active" id="lang-en">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+        <h3>How do I change the language?</h3>
+        <p>Open the <span class="badge">Settings</span> tab (last tab in the tab bar) and tap <strong>Language</strong> to switch between English and Croatian.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How do I see upcoming feasts?</h3>
+        <p>The <span class="badge">Today</span> tab shows upcoming feasts at the bottom. You can adjust how far ahead to look (1 week, 2 weeks, 3 weeks, or 1 month) in <span class="badge">Settings</span> → <strong>Upcoming Feasts</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How does the name-day contact matching work?</h3>
+        <p>The app can compare today's name-day saints against your device contacts and show who is celebrating. Tap the <strong>Contacts Celebrating</strong> card on the Today screen to grant permission. All matching happens locally on your device — no contact data is ever sent anywhere.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How do I search for a feast or saint?</h3>
+        <p>Open the <span class="badge">Search</span> tab and type any feast name, saint name, or liturgical season. Search covers feast definitions, name-day lists, and prayers. You can extend the search range in <span class="badge">Settings</span> → <strong>Search</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>How do I add my own prayers?</h3>
+        <p>Prayers are loaded from JSON files bundled with the app. New prayers can be added in future app updates. If you have a prayer you'd like included, please send it to the support email below.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>The app shows the wrong feast for a date. What should I do?</h3>
+        <p>The app follows the General Roman Calendar. Local diocesan or national celebrations may differ. If you believe there is a genuine error, please contact us with the date and feast name and we'll investigate.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Does the app work offline?</h3>
+        <p>Yes — completely. All calendar data, feast definitions, name days, and prayers are bundled inside the app. No internet connection is ever required.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>What is the liturgical color shown for each day?</h3>
+        <p>The app displays the liturgical color of the Roman Rite for each day — white, red, green, purple, rose, or black — following the rank of the celebration.</p>
+    </div>
+
+    <h2>Contact &amp; Support</h2>
+
+    <div class="contact-card">
+        <p><strong>Developer:</strong> Vice Madunic</p>
+        <p><strong>Email:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Response time:</strong> Usually within 2 business days</p>
+    </div>
+
+    <p>For bug reports, please include your iOS version, device model, and a description of the issue. Screenshots are always helpful.</p>
+
+</div>
+
+<!-- ═══════════════════════════════════════ CROATIAN ═══ -->
+<div class="lang-section" id="lang-hr">
+
+    <h2>Često postavljana pitanja</h2>
+
+    <div class="faq-item">
+        <h3>Kako promijeniti jezik?</h3>
+        <p>Otvorite karticu <span class="badge">Postavke</span> (zadnja kartica u traci) i dodirnite <strong>Jezik</strong> za prebacivanje između engleskog i hrvatskog.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Kako vidjeti nadolazeće blagdane?</h3>
+        <p>Kartica <span class="badge">Danas</span> prikazuje nadolazeće blagdane na dnu zaslona. Možete podesiti koliko unaprijed gledati (1 tjedan, 2 tjedna, 3 tjedna ili 1 mjesec) u <span class="badge">Postavkama</span> → <strong>Nadolazeći blagdani</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Kako funkcionira prepoznavanje imendana u kontaktima?</h3>
+        <p>Aplikacija može usporediti svece današnjeg imendana s kontaktima na uređaju i prikazati tko slavi. Dodirnite karticu <strong>Kontakti koji slave</strong> na početnom zaslonu za davanje dozvole. Sve se odvija lokalno na vašem uređaju — podaci o kontaktima nikada se ne šalju nigdje.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Kako pretraživati blagdane ili svece?</h3>
+        <p>Otvorite karticu <span class="badge">Pretraži</span> i upišite naziv blagdana, ime sveca ili liturgijsko razdoblje. Pretraga obuhvaća blagdane, imendane i molitve. Raspon pretraživanja možete proširiti u <span class="badge">Postavkama</span> → <strong>Pretraživanje</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Kako dodati vlastite molitve?</h3>
+        <p>Molitve se učitavaju iz JSON datoteka ugrađenih u aplikaciju. Nove molitve mogu se dodavati u budućim ažuriranjima. Ako imate molitvu koju biste željeli uključiti, pošaljite je na adresu e-pošte za podršku.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Aplikacija prikazuje pogrešan blagdan za određeni datum. Što trebam učiniti?</h3>
+        <p>Aplikacija prati Opći rimski kalendar. Lokalne biskupijske ili nacionalne svetkovine mogu se razlikovati. Ako smatrate da postoji stvarna greška, kontaktirajte nas s datumom i nazivom blagdana te ćemo to istražiti.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Radi li aplikacija bez interneta?</h3>
+        <p>Da — u potpunosti. Svi podaci kalendara, blagdani, imendani i molitve ugrađeni su unutar aplikacije. Internetska veza nikada nije potrebna.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Što znači liturgijska boja prikazana za svaki dan?</h3>
+        <p>Aplikacija prikazuje liturgijsku boju rimskog obreda za svaki dan — bijelu, crvenu, zelenu, ljubičastu, ružičastu ili crnu — prema rangu slavlja.</p>
+    </div>
+
+    <h2>Kontakt i podrška</h2>
+
+    <div class="contact-card">
+        <p><strong>Razvijač:</strong> Vice Madunic</p>
+        <p><strong>E-pošta:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Vrijeme odgovora:</strong> Obično unutar 2 radna dana</p>
+    </div>
+
+    <p>Za prijavu grešaka navedite verziju iOS-a, model uređaja i opis problema. Snimke zaslona su uvijek dobrodošle.</p>
+
+</div>
+
+<footer>
+    <p>© 2026 Vice Madunic · <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+</footer>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.lang-section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('lang-' + lang).classList.add('active');
+        document.querySelector('[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+        document.documentElement.lang = lang;
+    }
+
+    // Auto-detect browser language on load
+    window.addEventListener('DOMContentLoaded', function() {
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        if (browserLang.startsWith('hr')) setLang('hr');
+    });
+</script>
+
+</body>
+</html>
