@@ -33,9 +33,7 @@
             margin-bottom: 16px;
         }
 
-        .app-icon span {
-            font-size: 36px;
-        }
+        .app-icon span { font-size: 36px; }
 
         h1 {
             font-size: 28px;
@@ -44,25 +42,23 @@
             margin-bottom: 6px;
         }
 
-        .subtitle {
-            color: #888;
-            font-size: 15px;
-        }
+        .subtitle { color: #888; font-size: 15px; }
 
         .lang-toggle {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             gap: 8px;
             margin-bottom: 40px;
         }
 
         .lang-btn {
-            padding: 6px 20px;
+            padding: 6px 16px;
             border-radius: 20px;
             border: 1.5px solid #7B3F00;
             background: none;
             color: #7B3F00;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.15s;
@@ -92,14 +88,9 @@
             margin: 24px 0 6px;
         }
 
-        p {
-            margin-bottom: 12px;
-            font-size: 15px;
-        }
+        p { margin-bottom: 12px; font-size: 15px; }
 
-        .faq-item {
-            margin-bottom: 24px;
-        }
+        .faq-item { margin-bottom: 24px; }
 
         .contact-card {
             background: #f9f5f2;
@@ -109,18 +100,10 @@
             margin: 32px 0;
         }
 
-        .contact-card p {
-            margin-bottom: 6px;
-        }
+        .contact-card p { margin-bottom: 6px; }
 
-        a {
-            color: #7B3F00;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
+        a { color: #7B3F00; text-decoration: none; }
+        a:hover { text-decoration: underline; }
 
         .badge {
             display: inline-block;
@@ -152,16 +135,20 @@
 <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en')">English</button>
     <button class="lang-btn" onclick="setLang('hr')">Hrvatski</button>
+    <button class="lang-btn" onclick="setLang('it')">Italiano</button>
+    <button class="lang-btn" onclick="setLang('es')">Español</button>
+    <button class="lang-btn" onclick="setLang('pt')">Português</button>
+    <button class="lang-btn" onclick="setLang('de')">Deutsch</button>
+    <button class="lang-btn" onclick="setLang('fr')">Français</button>
 </div>
 
 <!-- ═══════════════════════════════════════ ENGLISH ═══ -->
 <div class="lang-section active" id="lang-en">
-
     <h2>Frequently Asked Questions</h2>
 
     <div class="faq-item">
         <h3>How do I change the language?</h3>
-        <p>Open the <span class="badge">Settings</span> tab (last tab in the tab bar) and tap <strong>Language</strong> to switch between English and Croatian.</p>
+        <p>Open the <span class="badge">Settings</span> tab (last tab in the tab bar) and tap <strong>Language</strong> to switch between English, Croatian, and Italian.</p>
     </div>
 
     <div class="faq-item">
@@ -200,25 +187,21 @@
     </div>
 
     <h2>Contact &amp; Support</h2>
-
     <div class="contact-card">
         <p><strong>Developer:</strong> Vice Madunic</p>
         <p><strong>Email:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
         <p><strong>Response time:</strong> Usually within 2 business days</p>
     </div>
-
     <p>For bug reports, please include your iOS version, device model, and a description of the issue. Screenshots are always helpful.</p>
-
 </div>
 
 <!-- ═══════════════════════════════════════ CROATIAN ═══ -->
 <div class="lang-section" id="lang-hr">
-
     <h2>Često postavljana pitanja</h2>
 
     <div class="faq-item">
         <h3>Kako promijeniti jezik?</h3>
-        <p>Otvorite karticu <span class="badge">Postavke</span> (zadnja kartica u traci) i dodirnite <strong>Jezik</strong> za prebacivanje između engleskog i hrvatskog.</p>
+        <p>Otvorite karticu <span class="badge">Postavke</span> (zadnja kartica u traci) i dodirnite <strong>Jezik</strong> za prebacivanje između engleskog, hrvatskog i talijanskog.</p>
     </div>
 
     <div class="faq-item">
@@ -257,15 +240,277 @@
     </div>
 
     <h2>Kontakt i podrška</h2>
-
     <div class="contact-card">
         <p><strong>Razvijač:</strong> Vice Madunic</p>
         <p><strong>E-pošta:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
         <p><strong>Vrijeme odgovora:</strong> Obično unutar 2 radna dana</p>
     </div>
-
     <p>Za prijavu grešaka navedite verziju iOS-a, model uređaja i opis problema. Snimke zaslona su uvijek dobrodošle.</p>
+</div>
 
+<!-- ═══════════════════════════════════════ ITALIAN ═══ -->
+<div class="lang-section" id="lang-it">
+    <h2>Domande frequenti</h2>
+
+    <div class="faq-item">
+        <h3>Come cambio la lingua?</h3>
+        <p>Apri la scheda <span class="badge">Impostazioni</span> (ultima scheda nella barra) e tocca <strong>Lingua</strong> per passare tra inglese, croato e italiano.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Come vedo le feste imminenti?</h3>
+        <p>La scheda <span class="badge">Oggi</span> mostra le feste imminenti in fondo. Puoi regolare quanto in anticipo visualizzarle (1 settimana, 2 settimane, 3 settimane o 1 mese) in <span class="badge">Impostazioni</span> → <strong>Feste imminenti</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Come funziona la corrispondenza degli onomastici con i contatti?</h3>
+        <p>L'app può confrontare i santi dell'onomastico di oggi con i tuoi contatti e mostrare chi festeggia. Tocca la scheda <strong>Contatti che festeggiano</strong> nella schermata Oggi per concedere il permesso. Tutto avviene localmente sul dispositivo — i dati dei contatti non vengono mai inviati da nessuna parte.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Come cerco una festa o un santo?</h3>
+        <p>Apri la scheda <span class="badge">Cerca</span> e digita il nome di una festa, di un santo o di un tempo liturgico. La ricerca copre le definizioni delle feste, gli onomastici e le preghiere. Puoi estendere il periodo di ricerca in <span class="badge">Impostazioni</span> → <strong>Ricerca</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Come aggiungo le mie preghiere?</h3>
+        <p>Le preghiere vengono caricate da file JSON inclusi nell'app. Nuove preghiere potranno essere aggiunte nei futuri aggiornamenti. Se hai una preghiera che vorresti includere, inviala all'email di supporto qui sotto.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>L'app mostra la festa sbagliata per una data. Cosa devo fare?</h3>
+        <p>L'app segue il Calendario Romano Generale. Le celebrazioni diocesane o nazionali locali possono differire. Se ritieni che ci sia un errore reale, contattaci con la data e il nome della festa e indagheremo.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>L'app funziona offline?</h3>
+        <p>Sì — completamente. Tutti i dati del calendario, le definizioni delle feste, gli onomastici e le preghiere sono inclusi nell'app. Non è mai necessaria una connessione a Internet.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Cosa significa il colore liturgico mostrato per ogni giorno?</h3>
+        <p>L'app mostra il colore liturgico del Rito Romano per ogni giorno — bianco, rosso, verde, viola, rosa o nero — in base al rango della celebrazione.</p>
+    </div>
+
+    <h2>Contatto e supporto</h2>
+    <div class="contact-card">
+        <p><strong>Sviluppatore:</strong> Vice Madunic</p>
+        <p><strong>Email:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Tempo di risposta:</strong> Di solito entro 2 giorni lavorativi</p>
+    </div>
+    <p>Per segnalare bug, includi la versione iOS, il modello del dispositivo e una descrizione del problema. Gli screenshot sono sempre utili.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ SPANISH ═══ -->
+<div class="lang-section" id="lang-es">
+    <h2>Preguntas frecuentes</h2>
+
+    <div class="faq-item">
+        <h3>¿Cómo cambio el idioma?</h3>
+        <p>Abre la pestaña <span class="badge">Ajustes</span> (última pestaña de la barra) y toca <strong>Idioma</strong> para cambiar entre inglés, croata e italiano.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>¿Cómo veo las próximas festividades?</h3>
+        <p>La pestaña <span class="badge">Hoy</span> muestra las próximas festividades en la parte inferior. Puedes ajustar con cuánta antelación verlas (1 semana, 2 semanas, 3 semanas o 1 mes) en <span class="badge">Ajustes</span> → <strong>Próximas festividades</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>¿Cómo funciona la coincidencia de onomásticos con contactos?</h3>
+        <p>La app puede comparar los santos del onomástico de hoy con tus contactos y mostrar quién celebra. Toca la tarjeta <strong>Contactos que celebran</strong> en la pantalla de Hoy para conceder permiso. Todo ocurre localmente en tu dispositivo — los datos de contactos nunca se envían a ningún lugar.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>¿Cómo busco una festividad o un santo?</h3>
+        <p>Abre la pestaña <span class="badge">Buscar</span> y escribe el nombre de una festividad, un santo o un tiempo litúrgico. La búsqueda cubre festividades, onomásticos y oraciones. Puedes ampliar el rango de búsqueda en <span class="badge">Ajustes</span> → <strong>Búsqueda</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>¿Cómo añado mis propias oraciones?</h3>
+        <p>Las oraciones se cargan desde archivos JSON incluidos en la app. Se podrán añadir nuevas oraciones en futuras actualizaciones. Si tienes una oración que te gustaría incluir, envíala al correo de soporte indicado abajo.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>La app muestra una festividad incorrecta para una fecha. ¿Qué debo hacer?</h3>
+        <p>La app sigue el Calendario Romano General. Las celebraciones diocesanas o nacionales locales pueden diferir. Si crees que hay un error real, contáctanos con la fecha y el nombre de la festividad y lo investigaremos.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>¿Funciona la app sin internet?</h3>
+        <p>Sí — completamente. Todos los datos del calendario, festividades, onomásticos y oraciones están incluidos en la app. Nunca se necesita conexión a Internet.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>¿Qué significa el color litúrgico mostrado para cada día?</h3>
+        <p>La app muestra el color litúrgico del Rito Romano para cada día — blanco, rojo, verde, morado, rosa o negro — según el rango de la celebración.</p>
+    </div>
+
+    <h2>Contacto y soporte</h2>
+    <div class="contact-card">
+        <p><strong>Desarrollador:</strong> Vice Madunic</p>
+        <p><strong>Email:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Tiempo de respuesta:</strong> Normalmente en 2 días hábiles</p>
+    </div>
+    <p>Para informar errores, incluye tu versión de iOS, el modelo del dispositivo y una descripción del problema. Las capturas de pantalla siempre son útiles.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ PORTUGUESE ═══ -->
+<div class="lang-section" id="lang-pt">
+    <h2>Perguntas frequentes</h2>
+
+    <div class="faq-item">
+        <h3>Como mudo o idioma?</h3>
+        <p>Abra a aba <span class="badge">Configurações</span> (última aba da barra) e toque em <strong>Idioma</strong> para alternar entre inglês, croata e italiano.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Como vejo as próximas festas?</h3>
+        <p>A aba <span class="badge">Hoje</span> mostra as próximas festas na parte inferior. Você pode ajustar com quanta antecedência vê-las (1 semana, 2 semanas, 3 semanas ou 1 mês) em <span class="badge">Configurações</span> → <strong>Próximas festas</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Como funciona a correspondência de onomásticos com contatos?</h3>
+        <p>O app pode comparar os santos do onomástico de hoje com seus contatos e mostrar quem está comemorando. Toque no cartão <strong>Contatos comemorando</strong> na tela de Hoje para conceder permissão. Tudo acontece localmente no seu dispositivo — os dados de contato nunca são enviados a nenhum lugar.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Como pesquiso uma festa ou um santo?</h3>
+        <p>Abra a aba <span class="badge">Pesquisar</span> e digite o nome de uma festa, um santo ou um tempo litúrgico. A pesquisa cobre festas, onomásticos e orações. Você pode ampliar o intervalo de pesquisa em <span class="badge">Configurações</span> → <strong>Pesquisa</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Como adiciono minhas próprias orações?</h3>
+        <p>As orações são carregadas de arquivos JSON incluídos no app. Novas orações poderão ser adicionadas em futuras atualizações. Se tiver uma oração que gostaria de incluir, envie-a para o email de suporte abaixo.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>O app mostra a festa errada para uma data. O que devo fazer?</h3>
+        <p>O app segue o Calendário Romano Geral. As celebrações diocesanas ou nacionais locais podem diferir. Se acreditar que há um erro real, entre em contato conosco com a data e o nome da festa e investigaremos.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>O app funciona offline?</h3>
+        <p>Sim — completamente. Todos os dados do calendário, festas, onomásticos e orações estão incluídos no app. Nunca é necessária conexão à Internet.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>O que significa a cor litúrgica exibida para cada dia?</h3>
+        <p>O app exibe a cor litúrgica do Rito Romano para cada dia — branco, vermelho, verde, roxo, rosa ou preto — de acordo com o grau da celebração.</p>
+    </div>
+
+    <h2>Contato e suporte</h2>
+    <div class="contact-card">
+        <p><strong>Desenvolvedor:</strong> Vice Madunic</p>
+        <p><strong>Email:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Tempo de resposta:</strong> Geralmente em até 2 dias úteis</p>
+    </div>
+    <p>Para relatar bugs, inclua sua versão do iOS, o modelo do dispositivo e uma descrição do problema. Capturas de tela são sempre bem-vindas.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ GERMAN ═══ -->
+<div class="lang-section" id="lang-de">
+    <h2>Häufig gestellte Fragen</h2>
+
+    <div class="faq-item">
+        <h3>Wie ändere ich die Sprache?</h3>
+        <p>Öffne den Tab <span class="badge">Einstellungen</span> (letzter Tab in der Tab-Leiste) und tippe auf <strong>Sprache</strong>, um zwischen Englisch, Kroatisch und Italienisch zu wechseln.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Wie sehe ich bevorstehende Feste?</h3>
+        <p>Der Tab <span class="badge">Heute</span> zeigt bevorstehende Feste am unteren Rand. Du kannst einstellen, wie weit im Voraus diese angezeigt werden (1 Woche, 2 Wochen, 3 Wochen oder 1 Monat) unter <span class="badge">Einstellungen</span> → <strong>Bevorstehende Feste</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Wie funktioniert die Namenstag-Kontaktübereinstimmung?</h3>
+        <p>Die App kann die Heiligen des heutigen Namenstags mit deinen Kontakten vergleichen und anzeigen, wer feiert. Tippe auf die Karte <strong>Feiernde Kontakte</strong> im Heute-Bildschirm, um die Berechtigung zu erteilen. Alles geschieht lokal auf deinem Gerät — Kontaktdaten werden niemals übertragen.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Wie suche ich nach einem Fest oder Heiligen?</h3>
+        <p>Öffne den Tab <span class="badge">Suche</span> und gib den Namen eines Festes, Heiligen oder Kirchenjahreszeit ein. Die Suche umfasst Festdefinitionen, Namenstagslisten und Gebete. Du kannst den Suchbereich unter <span class="badge">Einstellungen</span> → <strong>Suche</strong> erweitern.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Wie füge ich eigene Gebete hinzu?</h3>
+        <p>Gebete werden aus JSON-Dateien geladen, die in der App enthalten sind. Neue Gebete können in zukünftigen App-Updates hinzugefügt werden. Wenn du ein Gebet einreichen möchtest, sende es bitte an die unten angegebene Support-E-Mail.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Die App zeigt das falsche Fest für ein Datum. Was soll ich tun?</h3>
+        <p>Die App folgt dem Allgemeinen Römischen Kalender. Lokale diözesane oder nationale Feiern können abweichen. Wenn du einen echten Fehler vermutest, kontaktiere uns bitte mit dem Datum und dem Festnamen, und wir werden es prüfen.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Funktioniert die App offline?</h3>
+        <p>Ja — vollständig. Alle Kalenderdaten, Festdefinitionen, Namenstage und Gebete sind in der App enthalten. Es wird nie eine Internetverbindung benötigt.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Was bedeutet die für jeden Tag angezeigte liturgische Farbe?</h3>
+        <p>Die App zeigt die liturgische Farbe des Römischen Ritus für jeden Tag — Weiß, Rot, Grün, Violett, Rosa oder Schwarz — entsprechend dem Rang der Feier.</p>
+    </div>
+
+    <h2>Kontakt &amp; Support</h2>
+    <div class="contact-card">
+        <p><strong>Entwickler:</strong> Vice Madunic</p>
+        <p><strong>E-Mail:</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Antwortzeit:</strong> In der Regel innerhalb von 2 Werktagen</p>
+    </div>
+    <p>Bitte gib bei Fehlerberichten deine iOS-Version, das Gerätemodell und eine Beschreibung des Problems an. Screenshots sind immer hilfreich.</p>
+</div>
+
+<!-- ═══════════════════════════════════════ FRENCH ═══ -->
+<div class="lang-section" id="lang-fr">
+    <h2>Questions fréquentes</h2>
+
+    <div class="faq-item">
+        <h3>Comment changer la langue ?</h3>
+        <p>Ouvrez l'onglet <span class="badge">Réglages</span> (dernier onglet de la barre) et appuyez sur <strong>Langue</strong> pour basculer entre l'anglais, le croate et l'italien.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Comment voir les fêtes à venir ?</h3>
+        <p>L'onglet <span class="badge">Aujourd'hui</span> affiche les fêtes à venir en bas. Vous pouvez ajuster l'horizon d'affichage (1 semaine, 2 semaines, 3 semaines ou 1 mois) dans <span class="badge">Réglages</span> → <strong>Fêtes à venir</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Comment fonctionne la correspondance des fêtes avec les contacts ?</h3>
+        <p>L'app peut comparer les saints du jour avec vos contacts et afficher qui fête son saint. Appuyez sur la carte <strong>Contacts qui fêtent</strong> dans l'écran Aujourd'hui pour accorder l'autorisation. Tout se passe localement sur votre appareil — les données de contacts ne sont jamais transmises.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Comment rechercher une fête ou un saint ?</h3>
+        <p>Ouvrez l'onglet <span class="badge">Recherche</span> et saisissez le nom d'une fête, d'un saint ou d'un temps liturgique. La recherche couvre les définitions des fêtes, les listes de fêtes des saints et les prières. Vous pouvez étendre la plage de recherche dans <span class="badge">Réglages</span> → <strong>Recherche</strong>.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Comment ajouter mes propres prières ?</h3>
+        <p>Les prières sont chargées depuis des fichiers JSON inclus dans l'app. De nouvelles prières pourront être ajoutées dans de futures mises à jour. Si vous souhaitez soumettre une prière, envoyez-la à l'adresse e-mail de support ci-dessous.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>L'app affiche la mauvaise fête pour une date. Que faire ?</h3>
+        <p>L'app suit le Calendrier Romain Général. Les célébrations diocésaines ou nationales locales peuvent différer. Si vous pensez qu'il s'agit d'une véritable erreur, contactez-nous avec la date et le nom de la fête et nous enquêterons.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>L'app fonctionne-t-elle hors ligne ?</h3>
+        <p>Oui — entièrement. Toutes les données du calendrier, les définitions des fêtes, les fêtes des saints et les prières sont incluses dans l'app. Aucune connexion Internet n'est jamais nécessaire.</p>
+    </div>
+
+    <div class="faq-item">
+        <h3>Que signifie la couleur liturgique affichée pour chaque jour ?</h3>
+        <p>L'app affiche la couleur liturgique du Rite Romain pour chaque jour — blanc, rouge, vert, violet, rose ou noir — selon le degré de la célébration.</p>
+    </div>
+
+    <h2>Contact &amp; Support</h2>
+    <div class="contact-card">
+        <p><strong>Développeur :</strong> Vice Madunic</p>
+        <p><strong>E-mail :</strong> <a href="mailto:vmadunic@gmail.com">vmadunic@gmail.com</a></p>
+        <p><strong>Délai de réponse :</strong> Généralement sous 2 jours ouvrés</p>
+    </div>
+    <p>Pour signaler des bugs, veuillez inclure votre version iOS, le modèle de l'appareil et une description du problème. Les captures d'écran sont toujours utiles.</p>
 </div>
 
 <footer>
@@ -282,9 +527,10 @@
     }
 
     // Auto-detect browser language on load
-    window.addEventListener('DOMContentLoaded', function() {
-        const browserLang = navigator.language || navigator.userLanguage || 'en';
-        if (browserLang.startsWith('hr')) setLang('hr');
+    window.addEventListener('DOMContentLoaded', function () {
+        const lang = (navigator.language || navigator.userLanguage || 'en').slice(0, 2).toLowerCase();
+        const supported = ['en', 'hr', 'it', 'es', 'pt', 'de', 'fr'];
+        setLang(supported.includes(lang) ? lang : 'en');
     });
 </script>
 
